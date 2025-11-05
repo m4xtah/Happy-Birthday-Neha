@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Neha! 💖</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffe4e1;
+    color: #333;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  .hero {
+    padding: 100px 20px;
+  }
+  h1 {
+    font-size: 3em;
+    color: #ff1493;
+    animation: fadeIn 2s ease-in-out;
+  }
+  p {
+    font-size: 1.5em;
+    animation: fadeIn 3s ease-in-out;
+  }
+  .reel video {
+    max-width: 90%;
+    border-radius: 20px;
+    margin: 30px 0;
+    animation: fadeIn 3s ease-in-out;
+  }
+  .heart {
+    position: absolute;
+    font-size: 2em;
+    color: red;
+    animation: float 4s infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0); opacity: 1; }
+    50% { transform: translateY(-200px) translateX(50px); opacity: 0.7; }
+    100% { transform: translateY(-400px) translateX(-50px); opacity: 0; }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  .confetti {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+</style>
+</head>
+<body>
+
+<div class="confetti" id="confetti"></div>
+
+<div class="hero">
+  <h1>Happy Birthday, Neha! 💖</h1>
+  <p>তুমি হাসলে, আমার পৃথিবী আলো হয়ে যায় ☀️</p>
+  <p>আজ আর সব দিনই শুধু তোমার ❤️</p>
+</div>
+
+<div class="reel">
+  <!-- যদি video থাকে, এখানে add করো -->
+  <!-- <video autoplay muted loop>
+    <source src="birthday-reel.mp4" type="video/mp4">
+  </video> -->
+</div>
+
+<div class="message">
+  <p>তুমি আমার জীবনের সবচেয়ে সুন্দর গল্প। আমি তোমাকে ভালোবাসি, সবসময়। 💌</p>
+</div>
+
+<!-- Floating Hearts -->
+<script>
+  const numHearts = 15;
+  for (let i = 0; i < numHearts; i++) {
+    let heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random() * 100 + '%';
+    heart.style.animationDelay = (Math.random() * 4) + 's';
+    heart.innerHTML = '❤️';
+    document.body.appendChi
